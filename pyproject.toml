@@ -1,0 +1,19 @@
+[project]
+name = "package-name"
+version = "0.0.1"
+description = "description"
+license = { text = "BSD-3-Clause" }
+authors = [{ name = "X Y", email = "x@y.z" }]
+requires-python = ">=3.8"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["package_name"]
+
+[tool.setuptools.package-data]
+"*" = ["__FRACTAL_MANIFEST__.json"]
